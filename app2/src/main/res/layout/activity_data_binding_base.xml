@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="student"
+            type="com.qingcheng.du.app2.model.Student" />
+        <variable
+            name="presenter"
+            type="com.qingcheng.du.app2.view.activity.DataBindingBaseActivity.Presenter" />
+        <!--<variable-->
+            <!--name="contents"-->
+            <!--type="List&lt;String&gt;" />-->
+        <!--泛型支持会在编译时期报错，应使用转义字符-->
+        <import
+            name="Utils"
+            type="com.qingcheng.du.app2.util.MyUtils" />
+        <!--<import type="java.util.List" />-->
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.activity.DataBindingBaseActivity">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->presenter.onNameClick(student.name)}"
+            android:text="@{`Student 姓名：`+student.name}"
+            android:textAllCaps="false" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->presenter.onAgeClick(student.age)}"
+            android:text="@{`Student 年龄：`+student.age}"
+            android:textAllCaps="false" />
+        <include
+            layout="@layout/include_bind_view"
+            bind:studentInner="@{student}" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@{`引用的资源文件的appName：`+@string/app_name}"/>
+    </LinearLayout>
+</layout>
