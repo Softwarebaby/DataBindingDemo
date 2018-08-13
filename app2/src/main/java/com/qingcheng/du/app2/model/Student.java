@@ -28,10 +28,12 @@ public class Student extends BaseObservable{
     public int getAge() {
         return age;
     }
+
     public void setAge(int age) {
         this.age = age;
         notifyPropertyChanged(BR.age);
     }
+
     @Bindable
     public String getName() {
         return name;
@@ -46,5 +48,4 @@ public class Student extends BaseObservable{
      * ObservableFields实现数据绑定（推荐）
      */
     public final ObservableField<String> nameOF = new ObservableField<>();
-    public final ObservableField<String> ageOF = new ObservableField<>();
 }

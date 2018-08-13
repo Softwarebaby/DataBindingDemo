@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
     <activity android:name=".view.activity.DataBindingBaseActivity" />
-    <activity android:name=".view.activity.Main2Activity"></activity>
+    <activity android:name=".view.activity.RecyclerBindActivity"></activity>
 
 </application>
 

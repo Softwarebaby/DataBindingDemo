@@ -31,5 +31,9 @@ public class MainActivity extends AppCompatActivity {
         public void baseDataBinding() {
             startActivity(new Intent(MainActivity.this, DataBindingBaseActivity.class));
         }
+
+        public void bindRecyclerView() {
+            startActivity(new Intent(MainActivity.this, RecyclerBindActivity.class));
+        }
     }
 }
