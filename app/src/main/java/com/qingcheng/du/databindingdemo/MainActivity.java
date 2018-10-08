@@ -18,5 +18,7 @@ public class MainActivity extends AppCompatActivity {
         //绑定数据
         User user = new User("du", "du123");
         dataBinding.setUser(user);
+
+        //....
     }
 }
