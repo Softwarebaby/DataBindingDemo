@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         //绑定数据
-        User user = new User("du", "du123");
+        User user = new User("du123", "du123");
         dataBinding.setUser(user);
     }
 }
